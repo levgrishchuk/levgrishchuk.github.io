@@ -7,19 +7,19 @@ THREE.ColorManagement.enabled = false
 /**
  * Debug
  */
-const gui = new dat.GUI()
+// const gui = new dat.GUI()
 
 const parameters = {
     materialColor: '#ffeded'
 }
 
-gui
-    .addColor(parameters, 'materialColor')
-    .onChange(() =>
-    {
-        material.color.set(parameters.materialColor)
-        particlesMaterial.color.set(parameters.materialColor)
-    })
+// gui
+//     .addColor(parameters, 'materialColor')
+//     .onChange(() =>
+//     {
+//         material.color.set(parameters.materialColor)
+//         particlesMaterial.color.set(parameters.materialColor)
+//     })
 
 /**
  * Base
@@ -47,7 +47,8 @@ const material = new THREE.MeshToonMaterial({
 // Objects
 const objectsDistance = 4
 const mesh1 = new THREE.Mesh(
-    new THREE.TorusGeometry(1, 0.4, 16, 60),
+    // new THREE.TorusGeometry(1, 0.4, 16, 60),
+    new THREE.TorusGeometry(0.25, 0.1, 16, 60),
     material
 )
 const mesh2 = new THREE.Mesh(
@@ -59,15 +60,18 @@ const mesh3 = new THREE.Mesh(
     material
 )
 
-mesh1.position.x = 2
+// mesh1.position.x = 2
+mesh1.position.x = -1.75
 mesh2.position.x = - 2
 mesh3.position.x = 2
 
-mesh1.position.y = - objectsDistance * 0
+// mesh1.position.y = - objectsDistance * 0
+mesh1.position.y = -0.125
 mesh2.position.y = - objectsDistance * 1
 mesh3.position.y = - objectsDistance * 2
 
-scene.add(mesh1, mesh2, mesh3)
+// scene.add(mesh1, mesh2, mesh3)
+// scene.add(mesh1)
 
 const sectionMeshes = [ mesh1, mesh2, mesh3 ]
 
@@ -202,8 +206,10 @@ let previousTime = 0
 const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
-    const deltaTime = elapsedTime - previousTime
+    const deltaTime = Math.min(elapsedTime - previousTime, 1 / 60)    
     previousTime = elapsedTime
+
+    // deltaTime = Math.min(deltaTime, 1 / 60)  
 
     // Animate camera
     camera.position.y = - scrollY / sizes.height * objectsDistance

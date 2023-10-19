@@ -6,6 +6,18 @@
     <title>Lev Grishchuk</title>    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;900&display=swap" rel="stylesheet">
+
+    <!-- more google fonts for testing -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;900&family=Poppins:wght@100;400;900&display=swap" rel="stylesheet"> -->
+
+    <!-- testing -->
     <style>
         /* This is optional, just for better visualization */
         .box {
@@ -27,40 +39,94 @@
             
         }
     </style>
-  <script type="module" crossorigin src="./assets/index-666d32f6.js"></script>
-  <link rel="stylesheet" href="./assets/index-cf44828f.css">
+  <script type="module" crossorigin src="./assets/index-7782566d.js"></script>
+  <link rel="stylesheet" href="./assets/index-6239028e.css">
 </head>
 <body>
     <canvas class="webgl"></canvas>
 
-    <div class="container">
-        <div class="row">
+    <div id="topContainer" class="container font-sans">
+        <div id="mainRow" class="row">
             <div id="leftCol" class="col-md-6 col-sm-12">
                 <div class="d-flex flex-column innerContainer">
-                    <h1>Lev Grishchuk</h1>
-                    <h2>Student at York U</h2>
-                    <p>Some information about me</p>    
-                    <div class="mt-auto">
-                        <ul id="iconList" class="d-flex">
-                            <li>1</li>
-                            <li>1</li>
-                            <li>1</li>
+                    <h1 class="font-bold text-5xl text-slate-200 tracking-tight">Lev Grishchuk</h1>
+                    <h2 class="font-medium tracking-tight text-slate-200 text-xl" style="margin-top: 0.75rem;">Lassonde School of Engineering - York University</h2>
+                    <!-- <h3 class="font-medium tracking-tight text-slate-200 text-xl" style="margin-top: 0.75rem;">Bachelor's degree, Computer Science</h3> -->
+                    <p class="text-slate-400 leading-normal max-w-xs" style="margin-top: 1rem;">I'm a Computer Science Graduate who likes to build things!</p>    
+                    <!-- mt-auto used to be here -->
+                    <div>
+                        <ul id="iconList" class="flex items-center" style="margin-top:1rem; margin-left:.25rem;" aria-label="Social media">
+                            <li class="text-xs text-slate-400" style="margin-right:1.25rem;">
+                                <a class="block hoverableListItem" href="https://github.com/levgrishchuk" target="_blank" rel="noreferrer">
+                                    <span class="sr-only">GitHub</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" style="width:1.5rem; height:1.5rem;" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                                </a>
+                            </li>
+                            <li class="text-xs text-slate-400" style="margin-right:1.25rem;">
+                                <a class="block hoverableListItem" href="https://www.linkedin.com/in/levgrishchuk/" target="_blank" rel="noreferrer">
+                                    <span class="sr-only">LinkedIn</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:1.5rem; height:1.5rem;" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg>
+                                </a>
+                            </li>                            
                         </ul>
                     </div>
                     
                 </div>
             </div>
             <div id="rightCol" class="col-md-6 col-sm-12 scrollable box">
-                <div class="d-flex innerContainer">
-                    <div class="d-flex project">
-                        <div class="col-md-3 col-sm-12" style="background-color: red;">
-                            <img src="/passageCover.gif" alt="Project cover for Passage">
+                <div class="d-flex flex-column innerContainer">
+                    
+                    <!-- MIGHT DO IN THE FUTURE -->
+                    
+                    <!-- <section id="about">
+                        <div>
+                            <p style="margin-bottom: 1rem;">
+                                Back in 2020,  
+                            </p>
                         </div>
-                        <div class="d-flex flex-column col-md-9 col-sm-12" style="background-color: blue;">
-                            <h2>Passage</h2>
-                            <p>passage description</p>
+                    </section> -->
+
+                    <section id="projects"> 
+
+                        <!-- Don't forget to fully implement sticky in the future -->
+
+                        <!-- <div class="sticky w-screen section-title" style="padding-left:1.5rem; padding-right:1.5rem; padding-top:1.25rem; padding-bottom:1.25rem; margin-bottom:1rem; margin-left:-1.25rem; margin-right:-1.25rem;">
+                            <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200">Projects</h2>
+                        </div> -->
+                        
+                        <div class="section-title" style="padding-top:1.25rem; padding-bottom:1.25rem; margin-bottom:1rem;">                            
+                            <h2 class="section-title-inner text-sm font-bold uppercase tracking-widest text-slate-200">Projects</h2>
+                        </div> 
+
+                        <div class="d-flex project">                        
+                            <div class="row projectRow">
+                                <div class="col-md-auto col-12 p-0">
+                                    <img src="./images/passageCover.gif" alt="Project cover for Passage">
+                                </div>
+                                <div class="col-md col-12 p-0" style="">
+                                    <div class="d-flex flex-column">
+                                        <h3 class="font-small text-base">
+                                            <span class="inline-flex items-baseline font-medium leading-tight text-slate-200 text-base">
+                                                Passage   
+                                                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block projectArrow" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg> -->
+                                            </span>
+                                        </h3>
+                                        <p class="text-sm leading-normal text-slate-400" style="margin-top:0.5rem;">Envisioned as a productivity tool for musicians, Passage allows you to clip the most interesting segments from Spotify songs for easy reference in the future.</p>
+                                        <div class="d-flex flex-wrap" aria-label="Links" style="margin-top:0.5rem;">
+                                            <a href="https://passage.onrender.com/" style="text-decoration: none; margin-right:.375rem;" target="_blank" rel="noreferrer">
+                                                <div class="flex items-center rounded-full bg-teal-400 text-xs font-medium leading-5 text-teal-300" style="padding-top:.25rem; padding-bottom:.25rem; padding-left:0.75rem; padding-right:0.75rem;">Visit Site</div>
+                                            </a>
+                                            <a href="https://github.com/levgrishchuk/Passage" style="text-decoration: none; margin-right:.375rem;" target="_blank" rel="noreferrer">
+                                                <div class="flex items-center rounded-full bg-teal-400 text-xs font-medium leading-5 text-teal-300" style="padding-top:.25rem; padding-bottom:.25rem; padding-left:0.75rem; padding-right:0.75rem;">View on GitHub</div>
+                                            </a>
+                                        </div>
+                                        <iframe class="youtube-demo-desktop" width="388" height="218" style="margin-top:0.5rem;" src="https://www.youtube.com/embed/Q4BFqM1crfA?si=7shwS24kJgvzbvrC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <iframe class="youtube-demo-mobile" width="320" height="180" style="margin-top:0.5rem;" src="https://www.youtube.com/embed/Q4BFqM1crfA?si=7shwS24kJgvzbvrC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>                                
+                                </div>    
+                            </div>
                         </div>
-                    </div>
+                    </section>                    
                 </div>
             </div>
         </div>
